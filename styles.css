@@ -1,0 +1,140 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #f7f9fc;
+  color: #333;
+}
+
+/* -------------------
+   Header
+-------------------- */
+header {
+  background-color: #0f172a;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* -------------------
+   Navigation - Flexbox
+-------------------- */
+.navbar {
+  background-color: #1e293b;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0.5rem 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* -------------------
+   Layout Grid
+-------------------- */
+.layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* -------------------
+   Sidebar
+-------------------- */
+.sidebar {
+  background-color: #e0f2fe;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+/* -------------------
+   Main Content
+-------------------- */
+.main-content {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+/* -------------------
+   Flexbox Cards
+-------------------- */
+.flex-cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.card {
+  flex: 1 1 250px;
+  background-color: #fef3c7;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* -------------------
+   Footer
+-------------------- */
+footer {
+  background-color: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* -------------------
+   Media Queries
+-------------------- */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .layout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    font-size: 0.95rem;
+  }
+
+  .nav-links li {
+    margin: 0.25rem 0;
+  }
+}
